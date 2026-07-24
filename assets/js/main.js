@@ -37,8 +37,20 @@
   }
 
   if (navbar) {
+    var lastScrollTop = 0;
     var onScroll = function () {
-      navbar.classList.toggle('scrolled', getScrollTop() > 20);
+      var st = getScrollTop();
+      navbar.classList.toggle('scrolled', st > 20);
+      if (st > 50) {
+        if (st > lastScrollTop) {
+          navbar.classList.add('nav-hidden');
+        } else {
+          navbar.classList.remove('nav-hidden');
+        }
+      } else {
+        navbar.classList.remove('nav-hidden');
+      }
+      lastScrollTop = st;
     };
     (scrollContainer === window ? window : scrollContainer).addEventListener('scroll', onScroll, { passive: true });
     onScroll();
