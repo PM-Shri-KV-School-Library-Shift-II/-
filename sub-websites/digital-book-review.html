@@ -14,10 +14,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-Content-Type-Options" content="nosniff">
   <meta name="referrer" content="strict-origin-when-cross-origin">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; frame-src 'none'; object-src 'none'; connect-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; font-src 'self' https://cdnjs.cloudflare.com; img-src 'self' data:; frame-src 'self'; object-src 'self'; connect-src 'self'">
   <title>Digital Book Review - PM SHRI KV Library</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B">
-  <link rel="stylesheet" href="../assets/css/style.min.css">
+  <link rel="stylesheet" href="../assets/css/style.css">
   <link rel="icon" href="../LOGO/KV-LOGO.png">
 </head>
 <body>
@@ -45,31 +45,61 @@
     <div class="pdf-preview-section stack-reveal">
       <div class="pdf-item">
         <div class="pdf-item-header"><i class="fas fa-file-pdf"></i> Student Project 1</div>
-        <iframe src="../Students Projects/Project 1.pdf" title="Project 1"></iframe>
+        <div class="pdf-view-wrap">
+          <embed src="../Students Projects/Project 1.pdf#toolbar=1" type="application/pdf" class="pdf-embed">
+          <div class="pdf-fallback">
+            <i class="fas fa-file-pdf"></i>
+            <p>PDF preview not available on this device</p>
+            <a href="../Students Projects/Project 1.pdf" target="_blank" rel="noopener" class="btn-primary"><i class="fas fa-external-link-alt"></i> Open PDF</a>
+          </div>
+        </div>
         <div class="pdf-item-footer">
           <span>~11.75MB | 13 Pages</span>
-          <a href="../Students Projects/Project 1.pdf" class="btn-primary" style="padding:6px 14px;font-size:0.82rem" download><i class="fas fa-download"></i> Download</a>
+          <div class="pdf-actions">
+            <a href="../Students Projects/Project 1.pdf" target="_blank" rel="noopener" class="btn-view"><i class="fas fa-eye"></i> View</a>
+            <a href="../Students Projects/Project 1.pdf" class="btn-primary" style="padding:6px 14px;font-size:0.82rem" download><i class="fas fa-download"></i> Download</a>
+          </div>
         </div>
       </div>
       <div class="pdf-item">
         <div class="pdf-item-header"><i class="fas fa-file-pdf"></i> Student Project 2</div>
-        <iframe src="../Students Projects/Project 2.pdf" title="Project 2"></iframe>
+        <div class="pdf-view-wrap">
+          <embed src="../Students Projects/Project 2.pdf#toolbar=1" type="application/pdf" class="pdf-embed">
+          <div class="pdf-fallback">
+            <i class="fas fa-file-pdf"></i>
+            <p>PDF preview not available on this device</p>
+            <a href="../Students Projects/Project 2.pdf" target="_blank" rel="noopener" class="btn-primary"><i class="fas fa-external-link-alt"></i> Open PDF</a>
+          </div>
+        </div>
         <div class="pdf-item-footer">
           <span>~0.833MB | 10 Pages</span>
-          <a href="../Students Projects/Project 2.pdf" class="btn-primary" style="padding:6px 14px;font-size:0.82rem" download><i class="fas fa-download"></i> Download</a>
+          <div class="pdf-actions">
+            <a href="../Students Projects/Project 2.pdf" target="_blank" rel="noopener" class="btn-view"><i class="fas fa-eye"></i> View</a>
+            <a href="../Students Projects/Project 2.pdf" class="btn-primary" style="padding:6px 14px;font-size:0.82rem" download><i class="fas fa-download"></i> Download</a>
+          </div>
         </div>
       </div>
       <div class="pdf-item">
         <div class="pdf-item-header"><i class="fas fa-file-pdf"></i> Student Project 3</div>
-        <iframe src="../Students Projects/Project 3.pdf" title="Project 3"></iframe>
+        <div class="pdf-view-wrap">
+          <embed src="../Students Projects/Project 3.pdf#toolbar=1" type="application/pdf" class="pdf-embed">
+          <div class="pdf-fallback">
+            <i class="fas fa-file-pdf"></i>
+            <p>PDF preview not available on this device</p>
+            <a href="../Students Projects/Project 3.pdf" target="_blank" rel="noopener" class="btn-primary"><i class="fas fa-external-link-alt"></i> Open PDF</a>
+          </div>
+        </div>
         <div class="pdf-item-footer">
           <span>~0.199MB | 7 Pages</span>
-          <a href="../Students Projects/Project 3.pdf" class="btn-primary" style="padding:6px 14px;font-size:0.82rem" download><i class="fas fa-download"></i> Download</a>
+          <div class="pdf-actions">
+            <a href="../Students Projects/Project 3.pdf" target="_blank" rel="noopener" class="btn-view"><i class="fas fa-eye"></i> View</a>
+            <a href="../Students Projects/Project 3.pdf" class="btn-primary" style="padding:6px 14px;font-size:0.82rem" download><i class="fas fa-download"></i> Download</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="reveal" style="text-align:center;margin-top:32px;color:var(--gray-400);font-size:0.85rem">
-      <i class="fas fa-info-circle"></i> PDFs are displayed directly in your browser. For best viewing, use a modern browser with PDF support.
+      <i class="fas fa-info-circle"></i> PDFs open directly in your browser. Use the <strong>View</strong> button to open in a new tab if the preview doesn't load.
     </div>
   </div>
 </div>
